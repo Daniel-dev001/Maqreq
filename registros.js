@@ -1,15 +1,3 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyBfbuFkD9IN-W2xiFnx64qFm0bYM6ZNs60",
-  authDomain: "maqreq-9c564.firebaseapp.com",
-  projectId: "maqreq-9c564",
-  storageBucket: "maqreq-9c564.firebasestorage.app",
-  messagingSenderId: "391512571959",
-  appId: "1:391512571959:web:871ad89a4101b2996c7fb2"
-};
-
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
 const cuerpo = document.getElementById("cuerpoRegistros");
 const buscarInput = document.getElementById("buscar");
 
