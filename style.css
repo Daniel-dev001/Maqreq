@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6fa;
+  color: #0f1f3d;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  display: block;
+  margin: 30px auto 10px;
+  max-width: 180px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 2rem;
+  color: #0f1f3d;
+}
+
+form {
+  background-color: #ffffff;
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccd2e3;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ff7b00;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #0f1f3d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1c2e57;
+}
+
+button.secondary {
+  background-color: #ccc;
+  color: #222;
+}
+
+button.secondary:hover {
+  background-color: #bbb;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+.campo-radio {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.campo-radio .pregunta {
+  font-weight: 600;
+  min-width: 90px;
+}
+
+.campo-radio .opciones {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.campo-radio .opciones label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+/* ====== Tabla Profesional ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #0f1f3d;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+tbody td {
+  padding: 12px;
+  border-top: 1px solid #e0e6f0;
+  font-size: 0.93rem;
+}
+
+tbody tr:hover {
+  background-color: #f3f7fc;
+}
+
+td a {
+  color: #0f62fe;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.btn-icon {
+  background-color: #0f1f3d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  background-color: #1c2e57;
+}
+
+.btn-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+td:last-child {
+  white-space: nowrap;
+}
+
+/* Responsive general */
+body {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+form, .contenido {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive tabla */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 800px;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 20px 15px;
+  }
+
+  .campo-radio {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .campo-radio .opciones {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo {
+    max-width: 120px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+

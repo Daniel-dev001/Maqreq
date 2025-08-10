@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Maquinaria - MaqReq</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+  <img src="logo.png" alt="Logo de MaqReq" class="logo">
+  <h1>Registro de Vehículo</h1>
+
+  <form id="registroForm">
+    <label>Tipo de vehículo:</label>
+<select id="tipoVehiculo" required>
+  <option value="">Seleccione</option>
+  <option value="Volqueta">Volqueta</option>
+  <option value="Retroexcavadora">Retroexcavadora</option>
+  <option value="Vibrocompactador">Vibrocompactador</option>
+</select>
+    <input type="text" id="placa" placeholder="Placa (opcional)">
+    <input type="text" id="conductor" placeholder="¿Quién es el conductor?" required>
+    <input type="date" id="fecha" required>
+
+   <div class="campo-radio">
+  <label class="pregunta">¿Trabajó?</label>
+  <div class="opciones">
+    <label><input type="radio" name="trabajo" value="Sí"> Sí</label>
+    <label><input type="radio" name="trabajo" value="No"> No</label>
+  </div>
+</div>
+
+
+    <div id="horasContainer">
+      <label>Horas laboradas:</label>
+      <input type="time" id="horaInicio">
+      <span>a</span>
+      <input type="time" id="horaFin">
+      <input type="number" id="totalHoras" placeholder="Total horas" readonly>
+    </div>
+
+    <textarea id="obraLugar" placeholder="Obra / Lugar"></textarea>
+
+    <div id="gastosContainer">
+      <input type="number" id="gastoCombustible" placeholder="Gasto en combustible ($)">
+      <input type="number" id="gastoRepuestos" placeholder="Gasto en repuestos ($)">
+      <input type="number" id="gastoManoObra" placeholder="Gasto en mano de obra ($)">
+    </div>
+
+    <div id="volquetaExtra" style="display:none;">
+      <label>Material:</label>
+      <select id="material">
+        <option value="">Seleccione</option>
+        <option value="Arena">Arena</option>
+        <option value="Triturado">Triturado</option>
+        <option value="Otros">Otros...</option>
+      </select>
+
+      <input type="text" id="materialOtro" placeholder="Especificar otro material" style="display:none;">
+      <input type="number" id="metros" placeholder="Metros cuadrados">
+    </div>
+
+    <button type="submit">Guardar</button>
+    <button type="button" onclick="window.location.href='registros.html'" style="background-color: #ccc; color: #333;">⬅️ Cancelar / Volver</button>
+  </form>
+
+  <footer class="footer">
+    <p>© 2025 Aseconima - Sistema de Registro de Maquinaria. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

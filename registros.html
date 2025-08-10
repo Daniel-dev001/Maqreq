@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aseconima - Registros</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+
+
+</head>
+<body>
+  <img src="logo.png" alt="Logo de MaqReq" style="width: 150px; display: block; margin: 0 auto 20px;">
+
+  <h1>Registros de Maquinaria 
+    <span style="font-size: 0.8em; color: #666;">Aseconima</span>
+  </h1>
+  <a href="index.html"><button>➕ Nuevo registro</button></a>
+
+
+  <input type="text" id="buscar" placeholder="Buscar por conductor, obra o material">
+  <button id="btnExportarExcel">📄 Exportar a Excel</button>
+
+
+  <table border="1" id="tablaRegistros">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Vehículo</th>
+        <th>Placa</th>
+        <th>Conductor</th>
+        <th>Material</th>
+        <th>Metros</th>
+        <th>Obra / Lugar</th>
+        <th>Ver más</th>
+        <th>Eliminar</th>
+        <th>Editar</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoRegistros">
+      <!-- Registros cargados aquí -->
+    </tbody>
+  </table>
+
+  <!-- Firebase y Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="registros.js"></script>
+
+  <footer class="footer">
+  <p>© 2025 Aseconima - Sistema de Registro de Maquinaria. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
